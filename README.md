@@ -12,7 +12,7 @@ A DHT-based replacement for the World Wide Web
 *  Vapor is reisistant to tampering
 *  Vapor requires very little functioning infrastructure (a routeable network between nodes, even DNS is unecissary)
 
-Here's how vapor will work:
+##How Vapor will work:
 
 1.  User A creates a document using the vapor editor application
 2.  When the document is published, a hash of each component (html file, images, media assets, etc.) is generated and a pointer for each object is inserted into the DHT along with pointers to where the actual assets are avaliable (more on this later)
@@ -30,3 +30,8 @@ When User A updates the document, a simular series of events occur:
 2.  The modified files are again hashed and the hash is updated in the DHT
 3.  When User B next accesses the document, their local copy is validated against the hash stored in the DHT
 4.  In this case the hash is different, so User B's node fetches a fresh copy
+
+##How actual content is distributed
+Vapor will use a bittorent-like network to distribute the actual file contents of documents between peers, and these peers in turn will become seeds for the content once it's been validated.  In fact most of Vapor could be built on top of Bitorrent itself, but since bittorrent is closed-source software, the tight integration necissary for Vapor poses challenges.  
+
+Additionally, closed-source software is vunerable to exploitation that can't be uncovered by users of the software which could undermine some of the key benefits to Vapors design.
