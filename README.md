@@ -3,6 +3,13 @@ vapor
 
 A DHT-based replacement for the World Wide Web
 
+*  Vapor is both a browsing *and* authoring environment, akin to the original vision of the Web
+*  Vapor does not rely on dedicated *servers*, but instead distributes content between peers *securely* and *automatically*
+*  Vapor is not limited to *documents*, but documents are used to organize content (embedded media, files, etc.)
+*  Vapor is *fast*
+*  Vapor is reisistant to tampering
+*  Vapor requires very little functioning infrastructure (a routeable network between nodes, even DNS is unecissary)
+
 Here's how vapor will work:
 
 1.  User A creates a document using the vapor editor application
